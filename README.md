@@ -20,4 +20,4 @@ In the target directory the 'Backups_dir' is created and contains all the backup
 - [ ] Windows notification for each created backup
 
 ### Credit
-Credit for the repo name goes to @EzEren69.
+Credit for the repo name goes to [@EzErenEz](https://github.com/EzErenEz).
