@@ -8,16 +8,17 @@ The solution is this python script, which creates backups of your savegame every
 python backup.py -f Filename [-p Path] [-t Interval]
 python backup.py -h #Help page with explanation of parameters
 ```
-Filename: The file to backup.  
-Path: The directory where to store your backups. By default the directory of the original file.  
+Filename: The file or folder to backup.  
+Path: The directory where to store your backups. By default the directory of the original file / for folder the parent directory.  
 Interval: The time interval in minutes in which the backups should be created. By default 5 minutes.  
 
 In the target directory the 'Backups_dir' is created and contains all the backups.
 
+To stop the script use `ctrl + c`
 
 ## Future Ideas
 - [ ] Allow backup of whole directories
 - [ ] Windows notification for each created backup
 
 ### Credit
-Credit for the repo name goes to @EzEren69.
+Credit for the repo name goes to [@EzErenEz](https://github.com/EzErenEz).
