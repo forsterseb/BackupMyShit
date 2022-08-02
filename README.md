@@ -26,4 +26,4 @@ To stop the script use `ctrl + c`.
 ### Credit
 Credit for the repo name goes to [@EzErenEz](https://github.com/EzErenEz).
 
-<img style="float: right;" src="icon.png" height="100px" width="100px">
+<img src="icon.png" height="100px" width="100px">
