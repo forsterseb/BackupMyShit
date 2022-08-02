@@ -16,10 +16,12 @@ parser.add_argument('-p', '--path', required=False, metavar='Path', dest='backup
                     help='The path where you want the backup to be stored')
 parser.add_argument('-t', '--time', default=5, type=int, metavar="Interval", dest='interval',
                     help='The timeintervall in minutes in which the file should be backed up')
+parser.add_argument('-n', '--notification', action='store_true',
+                    help="Use this argument to get a windows notification after each backup")
 
 # read args or set default values
 args = parser.parse_args()
-
+print(args.notification)
 if args.interval is None:
     args.interval = DEFAULT_INTERVAL
 interval: int = args.interval
@@ -38,6 +40,9 @@ os.makedirs(backup_path, exist_ok=True)
 
 isFilepathFile = os.path.isfile(file_path)
 isFilepathDir = os.path.isdir(file_path)
+
+if (args.notification):
+    from toaster import showBackupFinishedToast
 
 # create backup-names
 if isFilepathFile:
@@ -58,4 +63,6 @@ while True:
         shutil.copytree(file_path, new_filepath)
 
     print(f"Stored new Backup {new_filepath}")
+    if (args.notification):
+        showBackupFinishedToast(new_filepath.rsplit('\\', maxsplit=1)[-1], backup_path)
     time.sleep(interval*60)
