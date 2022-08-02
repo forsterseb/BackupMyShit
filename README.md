@@ -1,10 +1,6 @@
 # BackupMyShit
-<div>
-<p style="float: right; margin: 0 0 20px 20px;"><img src="icon.png" height="200px" width="200px"></p>
-<p>Tired of games overwriting a savegame all the time and not having backups? <br>
-The solution is this python script, which creates backups of your savegame every x minutes.</p>
-</div>
-
+Tired of games overwriting a savegame all the time and not having backups?  
+The solution is this python script, which creates backups of your savegame every x minutes.
 
 ## Requirements
 If you want to get a windows notification after each backup you need to install winotify. `pip install winotify`
@@ -29,3 +25,5 @@ To stop the script use `ctrl + c`.
 
 ### Credit
 Credit for the repo name goes to [@EzErenEz](https://github.com/EzErenEz).
+
+<img style="float: right;" src="icon.png" height="100px" width="100px">
